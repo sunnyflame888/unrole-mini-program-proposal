@@ -1006,9 +1006,10 @@ p {
   border: 1px solid rgba(244, 241, 234, 0.08);
   mix-blend-mode: screen;
   background:
-    linear-gradient(rgba(244, 241, 234, calc(0.09 * var(--grain-opacity))) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 241, 234, calc(0.06 * var(--grain-opacity))) 1px, transparent 1px);
-  background-size: 13px 13px;
+    radial-gradient(circle at 24% 18%, rgba(244, 241, 234, calc(0.055 * var(--grain-opacity))), transparent 1px),
+    radial-gradient(circle at 72% 64%, rgba(244, 241, 234, calc(0.04 * var(--grain-opacity))), transparent 1px);
+  background-size: 29px 31px, 37px 43px;
+  opacity: 0.42;
 }
 
 .image-ritual {
