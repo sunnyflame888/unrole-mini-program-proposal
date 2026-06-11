@@ -27,8 +27,8 @@ body {
   margin: 0;
   color: var(--bone);
   background:
-    radial-gradient(circle at 72% 18%, rgba(48, 56, 47, 0.22), transparent 28rem),
-    linear-gradient(180deg, #030303 0%, var(--black) 36%, #050505 100%);
+    radial-gradient(circle at 74% 16%, rgba(48, 56, 47, 0.12), transparent 26rem),
+    linear-gradient(180deg, #020202 0%, #050505 42%, #030303 100%);
   font-family:
     "Helvetica Neue",
     "Inter",
@@ -64,7 +64,7 @@ input {
 
 .page-grain {
   z-index: 50;
-  opacity: 0.22;
+  opacity: 0.18;
   background-image:
     linear-gradient(rgba(244, 241, 234, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(244, 241, 234, 0.018) 1px, transparent 1px);
@@ -74,7 +74,7 @@ input {
 
 .system-vignette {
   z-index: 49;
-  box-shadow: inset 0 0 180px rgba(0, 0, 0, 0.82);
+  box-shadow: inset 0 0 220px rgba(0, 0, 0, 0.88);
 }
 
 .site-header {
@@ -148,10 +148,10 @@ input {
   overflow: hidden;
   padding: 118px 0;
   background:
-    linear-gradient(90deg, rgba(244, 241, 234, 0.026) 1px, transparent 1px),
-    linear-gradient(rgba(244, 241, 234, 0.018) 1px, transparent 1px),
-    var(--black);
-  background-size: 96px 96px;
+    linear-gradient(90deg, rgba(244, 241, 234, 0.014) 1px, transparent 1px),
+    linear-gradient(rgba(244, 241, 234, 0.012) 1px, transparent 1px),
+    #050505;
+  background-size: 118px 118px;
 }
 
 .section::before {
@@ -160,8 +160,8 @@ input {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 28%, rgba(244, 241, 234, 0.035), transparent 18rem),
-    radial-gradient(circle at 92% 72%, rgba(48, 56, 47, 0.16), transparent 24rem);
+    radial-gradient(circle at 18% 28%, rgba(244, 241, 234, 0.025), transparent 18rem),
+    radial-gradient(circle at 92% 72%, rgba(48, 56, 47, 0.1), transparent 24rem);
 }
 
 .section[data-section] > * {
@@ -246,7 +246,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.08) contrast(1.03) brightness(0.78);
+  filter: grayscale(0.12) contrast(1.08) brightness(0.68);
   transform: scale(1.02);
   animation: heroFloat 15s ease-in-out infinite alternate;
 }
@@ -254,8 +254,8 @@ p {
 .boot-shade {
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.48) 52%, rgba(0, 0, 0, 0.9)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.18) 44%, rgba(0, 0, 0, 0.96));
+    linear-gradient(90deg, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.58) 52%, rgba(0, 0, 0, 0.92)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2) 44%, rgba(0, 0, 0, 0.98));
 }
 
 .boot-content {
@@ -442,6 +442,38 @@ p {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   pointer-events: none;
+}
+
+.screen-overlay {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  padding: 34px;
+  color: var(--bone);
+  text-align: center;
+  pointer-events: none;
+}
+
+.screen-overlay-boot strong {
+  font-size: clamp(28px, 4.4vw, 52px);
+  font-weight: 520;
+  letter-spacing: 0.32em;
+}
+
+.screen-overlay-boot span {
+  color: rgba(244, 241, 234, 0.64);
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.screen-overlay-boot small {
+  color: rgba(244, 241, 234, 0.52);
+  font-size: 12px;
+  letter-spacing: 0.12em;
 }
 
 .access-section {
@@ -946,8 +978,8 @@ p {
     #050505;
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.02),
-    inset 0 0 80px rgba(244, 241, 234, 0.018),
-    0 46px 140px rgba(0, 0, 0, 0.56);
+    inset 0 0 96px rgba(244, 241, 234, 0.014),
+    0 56px 160px rgba(0, 0, 0, 0.64);
 }
 
 .visual-artifact::before,
@@ -964,8 +996,8 @@ p {
   background:
     linear-gradient(90deg, transparent 0 48%, rgba(244, 241, 234, calc(0.08 * var(--ritual-opacity))) 50%, transparent 52%),
     linear-gradient(180deg, transparent 0 49%, rgba(244, 241, 234, calc(0.05 * var(--ritual-opacity))) 50%, transparent 51%),
-    linear-gradient(180deg, rgba(244, 241, 234, 0.055), transparent 22%, transparent 72%, rgba(0, 0, 0, 0.34)),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.38), transparent 28%, transparent 72%, rgba(0, 0, 0, 0.42)),
+    linear-gradient(180deg, rgba(244, 241, 234, 0.04), transparent 18%, transparent 68%, rgba(0, 0, 0, 0.44)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.48), transparent 28%, transparent 72%, rgba(0, 0, 0, 0.52)),
     radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, var(--vignette-strength)) 100%);
 }
 
@@ -1000,44 +1032,49 @@ p {
   transform: scale(calc(var(--artifact-scale, 1) + 0.018));
 }
 
+.artifact-cover {
+  --artifact-scale: 1.08;
+  --artifact-position: 50% 50%;
+}
+
 .artifact-door {
-  --artifact-scale: 1;
+  --artifact-scale: 1.03;
   --artifact-position: 50% 50%;
 }
 
 .artifact-system {
-  --artifact-scale: 1;
+  --artifact-scale: 1.045;
   --artifact-position: 50% 50%;
 }
 
 .artifact-archive {
-  --artifact-scale: 1;
-  --artifact-position: 50% 50%;
+  --artifact-scale: 1.08;
+  --artifact-position: 50% 54%;
 }
 
 .artifact-detail {
-  --artifact-scale: 1;
-  --artifact-position: 50% 50%;
+  --artifact-scale: 1.06;
+  --artifact-position: 50% 48%;
 }
 
 .artifact-passport {
-  --artifact-scale: 1;
-  --artifact-position: 50% 50%;
+  --artifact-scale: 1.075;
+  --artifact-position: 50% 52%;
 }
 
 .artifact-member {
-  --artifact-scale: 1;
+  --artifact-scale: 1.04;
   --artifact-position: 50% 50%;
 }
 
 .artifact-identity {
-  --artifact-scale: 1;
-  --artifact-position: 50% 50%;
+  --artifact-scale: 1.06;
+  --artifact-position: 50% 52%;
 }
 
 .artifact-wall {
-  --artifact-scale: 1;
-  --artifact-position: 50% 50%;
+  --artifact-scale: 1.08;
+  --artifact-position: 50% 52%;
 }
 
 .phone-shell {
@@ -1061,9 +1098,9 @@ p {
   padding: 28px;
   color: rgba(244, 241, 234, 0.7);
   background:
-    radial-gradient(circle at 72% 22%, rgba(48, 56, 47, 0.16), transparent 20rem),
-    linear-gradient(135deg, rgba(244, 241, 234, 0.055), transparent 45%),
-    linear-gradient(180deg, #070707, #020202);
+    radial-gradient(circle at 72% 22%, rgba(48, 56, 47, 0.12), transparent 20rem),
+    linear-gradient(135deg, rgba(244, 241, 234, 0.036), transparent 45%),
+    linear-gradient(180deg, #060606, #010101);
   border-radius: inherit;
 }
 
@@ -1083,11 +1120,11 @@ p {
   background:
     linear-gradient(90deg, transparent 0 49%, rgba(244, 241, 234, 0.08) 50%, transparent 51%),
     linear-gradient(180deg, transparent 0 49%, rgba(244, 241, 234, 0.055) 50%, transparent 51%);
-  opacity: 0.42;
+  opacity: 0.34;
 }
 
 .fallback-kicker {
-  color: rgba(244, 241, 234, 0.38);
+  color: rgba(244, 241, 234, 0.34);
   font-size: 10px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -1095,9 +1132,11 @@ p {
 
 .image-fallback strong {
   max-width: 280px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.28;
   font-weight: 520;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   overflow-wrap: anywhere;
 }
 
